@@ -95,7 +95,7 @@ class PagesController extends Controller
         {
             Session::flash( 'message', 'User added Successfully!' );
 
-            return redirect( 'admin' );
+            return redirect( 'contacts' );
         }
         else return redirect( 'admin' )->withErrors( 'User was not added!' );
     }
