@@ -25,8 +25,6 @@ class PagesController extends Controller
 
     public function contactsAdmin()
     {
-        \DB::table( 'users' )->truncate();
-        \DB::table( 'user_contacts' )->truncate();
         $heading = 'Contacts Admin';
         $user_search = '';
         
