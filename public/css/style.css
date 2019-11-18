@@ -1,0 +1,277 @@
+html,
+body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+a.navbar-brand,
+a.navbar-brand:hover {
+    color: #fff !important;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px !important;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #636b6f !important;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.5em !important;
+    font-weight: inherit !important;
+    color: #fff !important;
+    margin-top: 0 !important;
+    margin-bottom: .5rem !important;
+}
+
+.heading h2 {
+    color: #209cee !important;
+}
+
+h2 {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    color: #1881c7 !important;
+    margin-top: 0 !important;
+    margin-bottom: .5rem !important;
+}
+
+h3 {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: #636b6f !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.navbar-nav {
+    float: right !important;
+}
+
+.header-bg-color {
+    background-color: #209cee;
+}
+
+.caret {
+    display: none !important;
+}
+
+#main {
+    margin-top: 10px;
+}
+
+.full-height {
+    height: 90vh;
+}
+
+.height600 {
+    min-height: 600px;
+}
+
+.height200 {
+    min-height: 200px;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.heading {
+    margin: 30px 0 0;
+}
+
+.col-md-12.box {
+    margin-top: 15px;
+}
+
+.content,
+.center {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.btn-primary,
+.btn-info {
+    color: #fff !important;
+    background-color: #0f93eb !important;
+    border-color: #0f93eb !important;
+}
+
+.btn-primary:hover,
+.btn-info:hover {
+    color: #fff !important;
+    background-color: #0c5a8f !important;
+    border-color: #0c5a8f !important;
+}
+
+.btn-warning {
+    background-color: #afafaf !important;
+    border-color: #afafaf !important;
+}
+
+.btn-warning:hover {
+    background-color: #8f8f8f !important;
+    border-color: #8f8f8f !important;
+}
+
+.links {
+    text-align: center;
+}
+
+.links>a {
+    color: #209cee;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #1881c7 !important;
+}
+
+span.active {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.pagination>li {
+    margin-left: 0;
+}
+
+.page-item.active .page-link {
+    color: #fff !important;
+    background-color: #209cee;
+    border-color: #209cee;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    color: #fff;
+    background-color: #209cee !important;
+    border-color: #209cee !important;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    color: #209cee !important;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.float-left {
+    float: left;
+    width: 35%;
+}
+
+.float-right {
+    float: right;
+    width: 65%;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.float-right.padding10 {
+    padding: 0 10px 10px 10px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 16px;
+}
+
+.panel-body.nopadding {
+    padding: 0 !important;
+}
+
+.panel-body.nopadding table {
+    margin-bottom: 0 !important;
+}
+
+input[ type=checkbox],
+input[ type=radio] {
+    margin-top: .3rem !important;
+    margin-left: -1.25rem !important;
+}
+
+input[ type=checkbox].form-check-input {
+    margin-top: .4rem !important;
+    margin-left: 1rem !important;
+}
+
+.bottom-align {
+    position: absolute;
+    bottom: 0;
+}
+
+footer {
+    margin-bottom: 10px;
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+span.search-results {
+    color: #209cee;
+    font-weight: bold;
+}
+
+table th {
+    position: relative !important;
+}
