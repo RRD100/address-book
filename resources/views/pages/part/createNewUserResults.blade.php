@@ -47,7 +47,7 @@
                 <label for="alternative_phone" class="col-md-4 col-form-label text-md-right">{{ __('Alternative Phone Number') }}</label>
 
                 <div class="col-md-6">
-                    <input id="phone" type="alternative_phone" class="form-control" name="contacts[alternative_phone]" value="{{ old('contacts[alternative_phone]') }}">
+                    <input id="alternative_phone" type="phone" class="form-control" name="contacts[alternative_phone]" value="{{ old('contacts[alternative_phone]') }}">
                 </div>
             </div>
 
