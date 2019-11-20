@@ -27,11 +27,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="alternative_email" class="col-md-4 col-form-label text-md-right">{{ __('Alternative E-Mail Address') }}</label>
+            <div class="alternative_emails"></div>
 
+            <div class="form-group row">
+                <label for="add_fields_emails" class="col-md-4 col-form-label text-md-right"></label>
                 <div class="col-md-6">
-                    <input id="alternative_email" type="email" class="form-control" name="contacts[alternative_email]" value="{{ old('contacts[alternative_email]') }}">
+                    <a href="#" class="add_fields_emails btn btn-primary" id="add_fields_emails">Add More Fields</a>
                 </div>
             </div>
 
@@ -43,11 +44,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="alternative_phone" class="col-md-4 col-form-label text-md-right">{{ __('Alternative Phone Number') }}</label>
+            <div class="alternative_phones"></div>
 
+            <div class="form-group row">
+                <label for="add_fields_phones" class="col-md-4 col-form-label text-md-right"></label>
                 <div class="col-md-6">
-                    <input id="alternative_phone" type="phone" class="form-control" name="contacts[alternative_phone]" value="{{ old('contacts[alternative_phone]') }}">
+                    <a href="#" class="add_fields_phones btn btn-primary" id="add_fields_phones">Add More Fields</a>
                 </div>
             </div>
 

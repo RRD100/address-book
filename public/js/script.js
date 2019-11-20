@@ -83,4 +83,61 @@ $(document).ready(function() {
         $('#user_search').val('');
         search_data(1);
     });
+
+    var wrapper_emails = $(".alternative_emails"); //Input fields wrapper for emails
+    var add_button_emails = $(".add_fields_emails"); //Add button class or ID for emails
+    var add_button_emails_edit = $(".add_fields_emails_edit"); //Add button class or ID for emails on Edit view
+    var wrapper_phones = $(".alternative_phones"); //Input fields wrapper for phones
+    var add_button_phones = $(".add_fields_phones"); //Add button class or ID for phones
+    var add_button_phones_edit = $(".add_fields_phones_edit"); //Add button class or ID for phones on Edit view
+
+    //When user click on add for emails
+    $(add_button_emails).click(function(e) {
+        e.preventDefault();
+
+        //add input field
+        $(wrapper_emails).append('<div class="form-group row"><label for="alternative_email" class="col-md-4 col-form-label text-md-right">Alternative E-Mail Address</label><div class="col-md-6"><input id="alternative_email" type="phone" class="form-control" name="contacts[alternative_email][]" value=""></div><a href="javascript:void(0);" class="remove_field btn btn-primary">Remove</a></div>');
+    });
+
+    //When user click on add input for phones
+    $(add_button_phones).click(function(e) {
+        e.preventDefault();
+
+        //add input field
+        $(wrapper_phones).append('<div class="form-group row"><label for="alternative_phone" class="col-md-4 col-form-label text-md-right">Alternative Phone Number</label><div class="col-md-6"><input id="alternative_phone" type="phone" class="form-control" name="contacts[alternative_phone][]" value=""></div><a href="javascript:void(0);" class="remove_field btn btn-primary">Remove</a></div>');
+    });
+
+    //when user click on remove button
+    $(wrapper_emails).on("click", ".remove_field", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //remove input field
+    });
+
+    //when user click on remove button
+    $(wrapper_phones).on("click", ".remove_field", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //remove input field
+    });
+
+    //When user click on add input for emails
+    $(add_button_emails_edit).click(function(e) {
+        e.preventDefault();
+
+        //add input field
+        $('.' + $(this).attr('parentID')).append('<div><input id="new" type="email" class="form-control ' + $(this).attr('classID') + '" name="contacts[alternative_emails][]"><a href="javascript:void(0);" class="remove_field btn btn-primary">Remove</a><br><br></div>').on("click", ".remove_field", function(e) {
+            e.preventDefault();
+            $(this).parent('div').remove(); //remove input field
+        });
+    });
+
+    //When user click on add input for phones
+    $(add_button_phones_edit).click(function(e) {
+        e.preventDefault();
+
+        //add input field
+        $('.' + $(this).attr('parentID')).append('<div><input id="new" type="phone" class="form-control ' + $(this).attr('classID') + '" name="contacts[alternative_phone][]"><a href="javascript:void(0);" class="remove_field btn btn-primary">Remove</a><br><br></div>').on("click", ".remove_field", function(e) {
+            e.preventDefault();
+            $(this).parent('div').remove(); //remove input field
+        });
+    });
 });

@@ -42,12 +42,13 @@ class CreateUser extends Authenticatable
     {        
         $return = $exist = [];
         $return[ 'user' ] = false;
-
+       // dd($user_arr);
         if( isset( $user_arr['contacts'] ) && count( $user_arr['contacts'] ) > 0 )
         {
             $exist[ 'name' ] = DB::table( 'users' )->select( [ 'id', 'name'] )->where( 'name', '=', $user_arr[ 'name' ] )->get()->first();
-
-            if( $exist[ 'name' ] != null )
+            $exist[ 'surname' ] = DB::table( 'users' )->select( [ 'id', 'surname'] )->where( 'surname', '=', $user_arr[ 'surname' ] )->get()->first();
+            
+            if( $exist[ 'name' ] != null || $exist[ 'surname' ] != null )
                 return $return;
  
             $exist[ 'contacts' ] = DB::table( 'user_contacts' )->select( 'contact' )->whereIn( 'contact', $user_arr[ 'contacts' ] )->get()->first();
@@ -67,14 +68,25 @@ class CreateUser extends Authenticatable
             {
                 foreach( $user_arr[ 'contacts' ] as $key => $contact )
                 {
-                    if( ($key == 'alternative_email' && $contact == null) || ( $key == 'alternative_phone' && $contact == null ) )
-                        continue;
-
-                    DB::table( 'user_contacts' )->insert( [
-                        'contact' => $contact,
-                        'contact_type' => $contact_type_arr[ $key ]->id,
-                        'user_id' => $user->id,
-                    ] );
+                    if( $key == 'alternative_email' || $key == 'alternative_phone' )
+                    {
+                        foreach( $contact as $k => $c )
+                        {
+                            DB::table( 'user_contacts' )->insert( [
+                                'contact' => $c,
+                                'contact_type' => $contact_type_arr[ $key ]->id,
+                                'user_id' => $user->id,
+                            ] );
+                        }
+                    }
+                    else
+                    {
+                        DB::table( 'user_contacts' )->insert( [
+                            'contact' => $contact,
+                            'contact_type' => $contact_type_arr[ $key ]->id,
+                            'user_id' => $user->id,
+                        ] );
+                    }
                 }
 
                 $return[ 'user' ] = true;
